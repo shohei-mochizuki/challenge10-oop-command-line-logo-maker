@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const htmlContent = require("./utils/generateMarkdown");
+const svgContent = require("./utils/generateSvg");
 
 
 // Create an array of questions for user input
@@ -23,8 +23,8 @@ name: 'shape_color'},
 
 
 // Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.appendFile(fileName, htmlContent.generateMarkdown(data), 
+function createLogo(fileName, data) {
+  fs.appendFile(fileName, svgContent.generateSvg(data), 
     (err) => err ? console.error(err) : console.log('README is successfully created!'));
 }
 
@@ -33,7 +33,7 @@ function writeToFile(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    writeToFile("README_sample.md", response); // Then sampleREADME.md file will be created
+    createLogo("logo.svg", response); // Then sampleREADME.md file will be created
   })
 }
 

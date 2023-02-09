@@ -73,7 +73,7 @@ See the GNU General Public License for more details.`
 
 
 // Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateSvg(data) {
     return `# ${data.title} ${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
 
 ## DESCRIPTION 
