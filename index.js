@@ -8,7 +8,7 @@ const svgContent = require("./utils/generateSvg");
 const questions = [
 {type: 'input',
 message: 'What characters do you want to include in thd logo? (Up to 3 characters)',
-name: 'chatacters'},
+name: 'characters'},
 {type: 'input',
 message: 'Which color do you want to use for the font',
 name: 'font_color'},
@@ -34,6 +34,7 @@ function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
     createLogo("logo.svg", response); // Then sampleREADME.md file will be created
+    console.log(response);
   })
 }
 
