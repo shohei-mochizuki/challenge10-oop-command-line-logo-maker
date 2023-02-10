@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const svgContent = require("./lib/generateSvg");
+const shapeSvg = require("./lib/shapes");
 
 
 // Create an array of questions for user input
@@ -15,7 +15,7 @@ name: 'font_color'},
 {type: 'list',
 message: 'Choose a shape for your logo.',
 name: 'shape',
-choices: ["circle", "triangle", "square"]},
+choices: ["circle", "square", "triangle"]},
 {type: 'input',
 message: 'Which color do you want to use for the shape?',
 name: 'shape_color'},
@@ -24,6 +24,16 @@ name: 'shape_color'},
 
 // Create a function to write README file
 function createLogo(fileName, data) {
+  switch (data.shape) {
+    case "circle":
+      
+      break;
+  
+    default:
+      break;
+  }
+  
+  
   fs.appendFile(fileName, svgContent.generateSvg(data), 
     (err) => err ? console.error(err) : console.log('README is successfully created!'));
 }
@@ -33,7 +43,7 @@ function createLogo(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    createLogo("./example/logo.svg", response); // Then sampleREADME.md file will be created
+    createLogo("./example/logo.svg", response); // Then logo.svg file will be created
     console.log(response);
   })
 }
