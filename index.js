@@ -26,15 +26,16 @@ name: 'shape_color'},
 function createLogo(fileName, data) {
   switch (data.shape) {
     case "circle":
-      fs.writeFile(fileName, shapeSvg.Circle.createSvg(data.shape_color, data.font_color, data.characters), 
+      // const circle = new shapeSvg.Circle(data.shape_color, data.font_color, data.characters);
+      fs.writeFile(fileName, (new shapeSvg.Circle(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
     case "square":
-      fs.writeFile(fileName, shapeSvg.Square.createSvg(data.shape_color, data.font_color, data.characters), 
+      fs.writeFile(fileName, (new shapeSvg.Square(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
     case "triangle":
-      fs.writeFile(fileName, shapeSvg.Triangle.createSvg(data.shape_color, data.font_color, data.characters), 
+      fs.writeFile(fileName, (new shapeSvg.Triangle(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
   }
