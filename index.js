@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const shapeSvg = require("./lib/shapes.js");
+const shapeSvg = require("./lib/shapes.js"); // Import shape classes ("Circle", "Square" and "Triangle")
 
 
 // Create an array of questions for user input
@@ -22,18 +22,20 @@ name: 'shape_color'},
 ];
 
 
-// Create a function to write README file
+// Function to write SVG file
 function createLogo(fileName, data) {
   switch (data.shape) {
-    case "circle ○":
-      // const circle = new shapeSvg.Circle(data.shape_color, data.font_color, data.characters);
+    // When "circle ○" is chosen, create an instance of the class "Circle" and use its function "createSvg" to create a SVG file with the user input data
+    case "circle ○": 
       fs.writeFile(fileName, (new shapeSvg.Circle(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
+    // When "square □" is chosen, create an instance of the class "Square" and use its function "createSvg" to create a SVG file with the user input data
     case "square □":
       fs.writeFile(fileName, (new shapeSvg.Square(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
+    // When "triangle △" is chosen, create an instance of the class "Triangle" and use its function "createSvg" to create a SVG file with the user input data
     case "triangle △":
       fs.writeFile(fileName, (new shapeSvg.Triangle(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
@@ -42,11 +44,11 @@ function createLogo(fileName, data) {
 }
 
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    createLogo("./examples/logo.svg", response); // Then logo.svg file will be created
+    createLogo("./examples/logo.svg", response); // Then logo.svg file will be created in the folder "examples"
   })
 }
 
