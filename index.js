@@ -1,7 +1,7 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const svgContent = require("./utils/generateSvg");
+const svgContent = require("./lib/generateSvg");
 
 
 // Create an array of questions for user input
@@ -33,7 +33,7 @@ function createLogo(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    createLogo("logo.svg", response); // Then sampleREADME.md file will be created
+    createLogo("./example/logo.svg", response); // Then sampleREADME.md file will be created
     console.log(response);
   })
 }
