@@ -15,7 +15,7 @@ name: 'font_color'},
 {type: 'list',
 message: 'Choose a shape for your logo.',
 name: 'shape',
-choices: ["circle", "square", "triangle"]},
+choices: ["circle ○", "square □", "triangle △"]},
 {type: 'input',
 message: 'Which color do you want to use for the shape?',
 name: 'shape_color'},
@@ -25,16 +25,16 @@ name: 'shape_color'},
 // Create a function to write README file
 function createLogo(fileName, data) {
   switch (data.shape) {
-    case "circle":
+    case "circle ○":
       // const circle = new shapeSvg.Circle(data.shape_color, data.font_color, data.characters);
       fs.writeFile(fileName, (new shapeSvg.Circle(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
-    case "square":
+    case "square □":
       fs.writeFile(fileName, (new shapeSvg.Square(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
-    case "triangle":
+    case "triangle △":
       fs.writeFile(fileName, (new shapeSvg.Triangle(data.shape_color, data.font_color, data.characters)).createSvg(), 
       (err) => err ? console.error(err) : console.log('Generated logo.svg'));
       break;
