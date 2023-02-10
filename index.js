@@ -10,14 +10,14 @@ const questions = [
 message: 'What characters do you want to include in thd logo? (Up to 3 characters)',
 name: 'characters'},
 {type: 'input',
-message: 'Which color do you want to use for the font',
+message: 'Which color do you want to use for the font? (Please type a color keyword or a hexadecimal number)',
 name: 'font_color'},
 {type: 'list',
 message: 'Choose a shape for your logo.',
 name: 'shape',
 choices: ["circle ○", "square □", "triangle △"]},
 {type: 'input',
-message: 'Which color do you want to use for the shape?',
+message: 'Which color do you want to use for the shape? (Please type a color keyword or a hexadecimal number)',
 name: 'shape_color'},
 ];
 
