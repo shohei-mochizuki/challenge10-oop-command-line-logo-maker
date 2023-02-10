@@ -46,7 +46,6 @@ function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
     createLogo("./examples/logo.svg", response); // Then logo.svg file will be created
-    console.log(response);
   })
 }
 
