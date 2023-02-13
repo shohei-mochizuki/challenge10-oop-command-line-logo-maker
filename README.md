@@ -44,6 +44,7 @@ Please copy the following files and folder to your computer and test this applic
 
 ## DEMO
 [Demo video](https://drive.google.com/file/d/1bFFJH4LCBmu0rfOSVKYlo7GwiIxnL6NE/view)
+[Demo video (another link)](https://watch.screencastify.com/v/1GZoejtSfryKScVO9wTv)
 
 ## SCREENSHOT
 ![image](https://user-images.githubusercontent.com/121307266/218576452-db4138b6-1b2f-4dd8-8fca-d94d61a344ab.png)
