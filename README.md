@@ -43,7 +43,7 @@ Please copy the following files and folder to your computer and test this applic
 * folder "examples"
 
 ## DEMO
-[Demo video](https://drive.google.com/file/d/1bFFJH4LCBmu0rfOSVKYlo7GwiIxnL6NE/view)
+[Demo video](https://drive.google.com/file/d/1bFFJH4LCBmu0rfOSVKYlo7GwiIxnL6NE/view)<br>
 [Demo video (another link)](https://watch.screencastify.com/v/1GZoejtSfryKScVO9wTv)
 
 ## SCREENSHOT
