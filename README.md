@@ -1,4 +1,4 @@
-# Challenge 10 OOP : Command line logo maker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Challenge 10 - OOP : Command line logo maker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## DESCRIPTION 
 This application enables you to create a logo (SVG file) by answering to prompts in command line. You can choose the following items in your logo:
@@ -16,7 +16,10 @@ This application enables you to create a logo (SVG file) by answering to prompts
 [QUESTIONS](#questions)
 
 ## INSTALLATION 
-This application requires 1.JavaScript, 2.Node.JS (version 16, not the latest), 3.Command line and 4.Node package manager to run. In a blank folder, please put index.js and package.json and a folder named lib. In the folder "lib", put shapes.js. Once all the necessary files are added, open the command line and move to this project folder. Type "npm install" and confirm that a folder called "node_modules" and a file called package-lock.json are created.
+This application requires 1.JavaScript, 2.Node.JS (version 16, not the latest), 3.Command line and 4.Node package manager to run. In a blank folder, please put index.js and package.json and a folder named lib. In the folder "lib", put shapes.js. Once all the necessary files are added, open the command line and move to this project folder. Type "npm install" and confirm that a folder called "node_modules" and a file called package-lock.json are created. This application uses the following libraries:
+* inquirer (please use version 8.2.4)
+* inquirer-maxlength-input-prompt (add-on of inquirer)
+* jest
 
 ## USAGE 
 First, make sure that all the necessary files are in your project folder (if not, refer to the INSTALLATION section). Open command line and move to this folder first. Type "node index.js" in the command line and answer the questions. You need to type your answers in command line for most of the questions. User inputs need to follow the instructions. For the shape, choose one from the list. Once you complete answering all the questions, you can find a SVG file in the folder "examples".
@@ -39,7 +42,7 @@ Please copy the following files and folder to your computer and test this applic
 * folder "lib" and shapes.js
 
 ## DEMO
-[Demo video](https://drive.google.com/file/d/1VTqxnmt4ohlNFNH3DxqPJfL513vMP7NI/view) THIS
+[Demo video](https://drive.google.com/file/d/1VTqxnmt4ohlNFNH3DxqPJfL513vMP7NI/view)
 
 ## SCREENSHOT
 ![image](https://user-images.githubusercontent.com/121307266/217698786-82f34f58-9569-4b42-8c98-1ecd33203aa4.png)
