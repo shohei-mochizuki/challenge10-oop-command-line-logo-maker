@@ -48,7 +48,11 @@ function createLogo(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
+    if (response.characters.length > 3){
+      console.log("More than 3 letters were input. Please start over.");
+    } else {
     createLogo("./examples/logo.svg", response); // Then logo.svg file will be created in the folder "examples"
+    }
   })
 }
 
