@@ -1,14 +1,17 @@
 // Include packages needed for this application
 const inquirer = require('inquirer');
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt'); // This is an add-on to limit the number of input letters
 const fs = require("fs");
 const shapeSvg = require("./lib/shapes.js"); // Import shape classes ("Circle", "Square" and "Triangle")
 
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt) // This is an add-on to limit the number of input letters
 
 // Create an array of questions for user input
 const questions = [
-{type: 'input',
+{type: 'maxlength-input',
 message: 'What characters do you want to include in thd logo? (Up to 3 characters)',
-name: 'characters'},
+name: 'characters',
+maxLength: 3},
 {type: 'input',
 message: 'Which color do you want to use for the font? (Please type a color keyword or a hexadecimal number)',
 name: 'font_color'},
@@ -48,12 +51,9 @@ function createLogo(fileName, data) {
 function init() {
   inquirer.prompt(questions) // Prompt window shows up first
   .then((response) => {
-    if (response.characters.length > 3){
-      console.log("More than 3 letters were input. Please start over.");
-    } else {
     createLogo("./examples/logo.svg", response); // Then logo.svg file will be created in the folder "examples"
     }
-  })
+  )
 }
 
 
