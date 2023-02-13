@@ -39,13 +39,15 @@ Please feel free to develop this application by forking the GitHub repository an
 Please copy the following files and folder to your computer and test this application:
 * index.js file
 * package.json 
-* folder "lib" and shapes.js
+* folder "lib" and shapes.js (you need "shapes.test.js" as well if you would like to test Shape classes: Circle, Square and Triangle)
+* folder "examples"
 
 ## DEMO
-[Demo video](https://drive.google.com/file/d/1VTqxnmt4ohlNFNH3DxqPJfL513vMP7NI/view)
+[Demo video](https://drive.google.com/file/d/1bFFJH4LCBmu0rfOSVKYlo7GwiIxnL6NE/view)
 
 ## SCREENSHOT
-![image](https://user-images.githubusercontent.com/121307266/217698786-82f34f58-9569-4b42-8c98-1ecd33203aa4.png)
+![image](https://user-images.githubusercontent.com/121307266/218576452-db4138b6-1b2f-4dd8-8fca-d94d61a344ab.png)
+![image](https://user-images.githubusercontent.com/121307266/218576529-451d26a5-d4e4-4927-a660-dcb25908ab93.png)
 
 ## QUESTIONS 
 If you have any questions, please feel free to reach out to me!<br>
